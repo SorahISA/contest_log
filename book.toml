@@ -4,3 +4,15 @@ language = "en"
 multilingual = false
 src = "src"
 title = "SorahISA's Contest Logs"
+
+[preprocessor.katex]
+after = ["links"]
+macros = "./settings/katex-macros.txt"
+
+[output.html]
+mathjax-support = true
+no-section-label = true
+
+[output.html.fold]
+enable = true
+level = 1

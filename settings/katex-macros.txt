@@ -1,0 +1,9 @@
+\Ord:{\mathcal{O}}
+\backslash:{\setminus}
+\become:{\leftarrow}
+\floor:{\left\lfloor{#1}\right\rfloor}
+\ceil:{\left\lceil{#1}\right\rceil}
+\bool:{[\![ #1 ]\!]}
+\tand:{\textsc{ and }}
+\tor:{\textsc{ or }}
+\txor:{\textsc{ xor }}
