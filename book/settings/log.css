@@ -1,0 +1,19 @@
+.table-ac,.table-ac>td,.table-ac>th {
+    background-color: #c3e6cb
+}
+
+.table-bl,.table-bl>td,.table-bl>th {
+    background-color: #bee5eb
+}
+
+.table-td,.table-td>td,.table-td>th {
+    background-color: #ffeeba
+}
+
+.table-wa,.table-wa>td,.table-wa>th {
+    background-color: #f5c6cb
+}
+
+.table-na,.table-na>td,.table-na>th {
+    background-color: #fdfdfe
+}

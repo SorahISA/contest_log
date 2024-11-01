@@ -12,7 +12,9 @@ macros = "./settings/katex-macros.txt"
 [output.html]
 mathjax-support = true
 no-section-label = true
+smart-punctuation = true
+additional-css = ["settings/log.css", "settings/custom.css"]
 
 [output.html.fold]
 enable = true
-level = 1
+level = 0

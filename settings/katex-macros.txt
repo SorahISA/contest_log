@@ -1,5 +1,6 @@
 \Ord:{\mathcal{O}}
 \backslash:{\setminus}
+\emptyset:{\varnothing}
 \become:{\leftarrow}
 \floor:{\left\lfloor{#1}\right\rfloor}
 \ceil:{\left\lceil{#1}\right\rceil}
@@ -7,3 +8,4 @@
 \tand:{\textsc{ and }}
 \tor:{\textsc{ or }}
 \txor:{\textsc{ xor }}
+\Arr:{\left\langle #1 \right\rangle}

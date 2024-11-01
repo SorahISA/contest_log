@@ -1,5 +1,27 @@
 # Summary
 
+[做題紀錄](./log.md)
+
 - [Universal Cup]()
     - [Season 3]()
         - [Stage 3: Ukraine](./ucup/03_03-ukraine.md)
+
+- [ICPC - Africa and Arab]()
+- [ICPC - Asia East Continent]()
+- [ICPC - Asia Pacific]()
+    - [Indonesia]()
+    - [Japan]()
+    - [Korea]()
+    - [Taiwan]()
+    - [Vietnam]()
+- [ICPC - Asia West Continent]()
+    - [Iran]()
+- [ICPC - Europe]()
+    - [Central Europe (CERC)]()
+    - [Northwestern Europe (NWERC)]()
+    - [Southeastern Europe (SEERC)]()
+    - [Southwestern Europe (SWERC)]()
+- [ICPC - Latin America]()
+- [ICPC - North America]()
+- [ICPC - Northern Eurasia]()
+- [ICPC - World Final]()
