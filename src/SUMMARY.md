@@ -25,3 +25,5 @@
 - [ICPC - North America]()
 - [ICPC - Northern Eurasia]()
 - [ICPC - World Final]()
+- [ICPC - Other]()
+    - [2024-2025 CTU Open Contest](./others/gym105542.md)

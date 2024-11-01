@@ -22,7 +22,7 @@
 
 這場難度在 UCup 中算很低，最強的 USA1 甚至在兩個小時以內就破台了。
 
-## [Problem A. Aibohphobia](https://contest.ucup.ac/contest/1714/problem/8829)
+## [Problem A. Aibohphobia](https://qoj.ac/contest/1714/problem/8829)
 
 ##### Tags: `casework`, `palindrome`  
 
@@ -34,7 +34,7 @@
 
 當有三種以上的字元時，將字串排序並 `reverse(1 + ALL(s))` 後輸出即可。
 
-## [Problem B. Breaking Bad](https://contest.ucup.ac/contest/1714/problem/8830)
+## [Problem B. Breaking Bad](https://qoj.ac/contest/1714/problem/8830)
 
 待補
 
@@ -42,7 +42,7 @@
 >
 > * $n \le 1000$
 
-## [Problem C. Chemistry Class](https://contest.ucup.ac/contest/1714/problem/8831)
+## [Problem C. Chemistry Class](https://qoj.ac/contest/1714/problem/8831)
 
 ##### Tags: `greedy`
 
@@ -71,7 +71,7 @@
 
 因為這總是保證了最多的好配對，所以 greedy 可以得到最佳解。
 
-## [Problem D. Daily Disinfection](https://contest.ucup.ac/contest/1714/problem/8832)
+## [Problem D. Daily Disinfection](https://qoj.ac/contest/1714/problem/8832)
 
 ##### Tags: `casework`
 
@@ -83,7 +83,7 @@
 
 觀察到只有在 `1.101.101.101.1` 這種 case（頭尾都是 `1` 且沒有連續的 `0`）才會讓 `1` 必須被挪動第二次，此時一定是挪動最小塊的連續 `1`。
 
-## [Problem E. Equalizer Ehrmantraut](https://contest.ucup.ac/contest/1714/problem/8833)
+## [Problem E. Equalizer Ehrmantraut](https://qoj.ac/contest/1714/problem/8833)
 
 ##### Tags: `math`
 
@@ -95,7 +95,8 @@
 
 長一樣當然都是合法的，考慮當有數字不同的時候，W.L.O.G. $a_p > b_p$ 是第一個不同的位置且 $\Arr{a}$ 非嚴格遞增：
 
-- 此時 $b_{p+1}$ 一定等於 $b_p$，否則 $[ b_p < a_p \le a_{p+1} ] \implies [ \min(a_{p+1}, b_p) = b_p = a_p = \min(a_p, b_{p+1}) \ne b_{p+1} ]$ 矛盾。
+- 此時 $b_{p+1}$ 一定等於 $b_p$，由 $b_p < a_p \le a_{p+1}$ 可以推得 $[ \min(a_{p+1}, b_p) = b_p = \min(a_p, b_{p+1}) < a_p ] \implies [ b_p = b_{p+1} ]$。
+- 此時 $b_p$ 一定 $\ge b_{p-1}$，由 $b_{p-1} = a_{p-1} \le a_p$ 可以推得 $[ \min(a_{p-1}, b_p) = \min(a_p, b_{p-1}) ] \implies [ b_p \ge b_{p-1} ]$。
 
 也就是合法的序列對長相是 $(\Arr{a}, \Arr{\min(a, x)})$。枚舉 $\Arr{a}$ 中的最大值 $x$ 後可以得到答案：
 
@@ -105,7 +106,7 @@ $$
 
 即可 $\Ord(m \log n)$ 求解。
 
-## [Problem F. Formal Fring](https://contest.ucup.ac/contest/1714/problem/8834)
+## [Problem F. Formal Fring](https://qoj.ac/contest/1714/problem/8834)
 
 待補
 
@@ -115,7 +116,7 @@ $$
 >
 > * $X \le 10^6$
 
-## [Problem G. Goodman](https://contest.ucup.ac/contest/1714/problem/8835)
+## [Problem G. Goodman](https://qoj.ac/contest/1714/problem/8835)
 
 AC 但還不會證明，待補
 
@@ -125,7 +126,7 @@ AC 但還不會證明，待補
 >
 > * 多筆測資、$\sum n \le 10^6$
 
-## [Problem H. Highway Hoax](https://contest.ucup.ac/contest/1714/problem/8836)
+## [Problem H. Highway Hoax](https://qoj.ac/contest/1714/problem/8836)
 
 ##### Tags: `dp`, `ntt`
 
@@ -151,7 +152,7 @@ AC 但還不會證明，待補
 
 一個方便的 $\Ord(n \log^2 n)$ trick 是把所有多項式丟進 queue（deque）裡，每次取出前兩個做事之後再放到最後面，這個的複雜度可以透過參考線段樹的長相感性證明。
 
-## [Problem I. Increasing Income](https://contest.ucup.ac/contest/1714/problem/8837)
+## [Problem I. Increasing Income](https://qoj.ac/contest/1714/problem/8837)
 
 待補
 
@@ -163,11 +164,13 @@ AC 但還不會證明，待補
 >
 > * 多筆測資、$\sum n \le 10^6$
 
-## [Problem J. Jesse's Job](https://contest.ucup.ac/contest/1714/problem/8838)
+## [Problem J. Jesse's Job](https://qoj.ac/contest/1714/problem/8838)
 
 ##### Tags: N/A
 
 > 給定一個排列 $\sigma$，你要將排列中的元素塗上黃色 `Y` 或紅色 `R`（至少各一），並最大化將黃色跟紅色分別排序之後的 $\#\{ \sigma_i' = i \}$。
+>
+> 請構造一組解。
 >
 > * 多筆測資、$\sum n \le 10^6$
 
@@ -176,13 +179,13 @@ AC 但還不會證明，待補
 如果把環切成 $\Arr{i}, \Arr{j}$ 兩個部分：$i_1 \to i_2 \to \cdots \to i_k \to j_1 \to j_2 \to \cdots \to j_{n-k} \to i_1$，滿足 $i_1 = 1, j_1 = 2$，則可以發現：
 
 - 選了位置 $i_p$ 會選到數字 $i_{p+1}$（選了位置 $i_k$ 會選到數字 $j_1 = 2$）。
-- 選了位置 $j_q$ 會選到數字 $j_{q+1}$（選了位置 $j_{n-k}$ 朏選到數字 $i_1 = 1$）。
+- 選了位置 $j_q$ 會選到數字 $j_{q+1}$（選了位置 $j_{n-k}$ 會選到數字 $i_1 = 1$）。
 
 因為 $1$ 跟 $2$ 比所有其他數字都還要小，所以把位置 $\Arr{i}$ 排序後只會讓 $\sigma_{i_1}' = 2$，$\sigma_{i_p}' = i_p$；把位置 $\Arr{j}$ 排序後只會讓 $\sigma_{j_1}' = 1$，$\sigma_{j_q}' = j_q$。
 
 至此，就得到了排好 $n-2$ 個數字的方法，而顯然在只有一個環的情況下不存在排好恰 $n-1$ 或 $n$ 個數字的方法。
 
-## [Problem K. Knocker](https://contest.ucup.ac/contest/1714/problem/8839)
+## [Problem K. Knocker](https://qoj.ac/contest/1714/problem/8839)
 
 待補
 
@@ -192,7 +195,7 @@ AC 但還不會證明，待補
 >
 > * $n \le 500$、$a_i \le 500$
 
-## [Problem L. Lalo's Lawyer Lost](https://contest.ucup.ac/contest/1714/problem/8840)
+## [Problem L. Lalo's Lawyer Lost](https://qoj.ac/contest/1714/problem/8840)
 
 待補
 

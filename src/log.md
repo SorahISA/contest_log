@@ -25,3 +25,27 @@
         <td title="Lalo's Lawyer Lost"      class="table-na">L</td>
     </tr>
 </table>
+
+## ICPC - Other
+
+<table>
+    <tr>
+        <th>Contest</th>
+        <th>A</th><th>B</th><th>C</th><th>D</th><th>E</th><th>F</th><th>G</th><th>H</th><th>I</th><th>J</th><th>K</th><th>L</th><th>M</th><th>N</th><th>O</th>
+    </tr>
+    <tr>
+        <td><a href="./others/gym105442.md">2024-2025 CTU Open Contest</a></td>
+        <td title="Flag Bearer"         class="table-bl">A</td>
+        <td title="Cowpproximation"     class="table-na">B</td>
+        <td title="Reptile Eggs"        class="table-na">C</td>
+        <td title="Fishception"         class="table-td">D</td>
+        <td title="Pigpartite Giraffe"  class="table-na">E</td>
+        <td title="Hamster"             class="table-td">F</td>
+        <td title="Pray Mink"           class="table-td">G</td>
+        <td title="Ornithology"         class="table-td">H</td>
+        <td title="P||k Cutting"        class="table-td">I</td>
+        <td title="Rabid Rabbit"        class="table-td">J</td>
+        <td title="Fellow Sheep"        class="table-td">K</td>
+        <td title="Watchdogs"           class="table-td">L</td>
+    </tr>
+</table>
