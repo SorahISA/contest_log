@@ -38,14 +38,14 @@
         <td title="Flag Bearer"         class="table-bl">A</td>
         <td title="Cowpproximation"     class="table-na">B</td>
         <td title="Reptile Eggs"        class="table-na">C</td>
-        <td title="Fishception"         class="table-td">D</td>
+        <td title="Fishception"         class="table-ac">D</td>
         <td title="Pigpartite Giraffe"  class="table-na">E</td>
-        <td title="Hamster"             class="table-td">F</td>
+        <td title="Hamster"             class="table-bl">F</td>
         <td title="Pray Mink"           class="table-td">G</td>
-        <td title="Ornithology"         class="table-td">H</td>
-        <td title="P||k Cutting"        class="table-td">I</td>
-        <td title="Rabid Rabbit"        class="table-td">J</td>
-        <td title="Fellow Sheep"        class="table-td">K</td>
-        <td title="Watchdogs"           class="table-td">L</td>
+        <td title="Ornithology"         class="table-bl">H</td>
+        <td title="P||k Cutting"        class="table-ac">I</td>
+        <td title="Rabid Rabbit"        class="table-ac">J</td>
+        <td title="Fellow Sheep"        class="table-ac">K</td>
+        <td title="Watchdogs"           class="table-ac">L</td>
     </tr>
 </table>

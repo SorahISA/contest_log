@@ -2,6 +2,12 @@
     --content-max-width: 80%;
 }
 
+figure img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .chapter li.part-title {
     color: var(--sidebar-fg);
     margin-bottom: -5px;
