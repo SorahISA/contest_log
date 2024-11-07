@@ -3,7 +3,7 @@ struct LCA {
     
     vector<vector<pair<int, Info>>> adj;
     vector<vector<pair<int, Info>>> anc;
-    vector<int> dep, dfn_i, dfn_o;
+    vector<int> dep, vis;
     int lgmx, maxn;
     
     void init(int N) {
@@ -12,8 +12,7 @@ struct LCA {
         adj.resize(maxn);
         anc.assign(lgmx, vector(maxn, make_pair(int(0), Info())));
         dep.assign(maxn, 0);
-        dfn_i.assign(maxn, -1);
-        dfn_o.assign(maxn, -1);
+        vis.assign(maxn, 0);
     }
     
     void add_edge(int u, int v, const Info &info) {
@@ -22,13 +21,14 @@ struct LCA {
     
     void build() {
         function<void(int, int)> dfs = [&](int now, int lst) {
+            vis[now] = 1;
             for (auto [x, info] : adj[now]) {
                 if (x == lst) continue;
                 dep[x] = dep[now] + 1, dfs(x, now);
                 anc[0][x] = {now, info};
             }
         };
-        for (int i = 0; i < maxn; ++i) { if (dfn_i[i] == -1) dfs(i, i); }
+        for (int i = 0; i < maxn; ++i) { if (vis[i] == 0) dfs(i, i); }
         
         for (int lay = 1; lay < lgmx; ++lay) {
             for (int i = 0; i < maxn; ++i) {
