@@ -179,6 +179,42 @@
                     <main>
                         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
 <h1 id="tree-algorithm"><a class="header" href="#tree-algorithm">Tree Algorithm</a></h1>
+<h2 id="disjoint-set-union"><a class="header" href="#disjoint-set-union">Disjoint Set Union</a></h2>
+<p>支援操作：</p>
+<ol>
+<li><code>void init(int n)</code>
+<ul>
+<li>初始化點集合為 <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">[</span><span class="mord">0</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">n</span><span class="mclose">]</span></span></span></span>，代表 <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">0</span></span></span></span>-base 或 <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">1</span></span></span></span>-base 皆可</li>
+</ul>
+</li>
+<li><code>int R(int x)</code>
+<ul>
+<li><strong>均攤</strong> <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathcal" style="margin-right:0.02778em;">O</span></span><span class="mopen">(</span><span class="mop">lo<span style="margin-right:0.01389em;">g</span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">n</span><span class="mclose">)</span></span></span></span> 回傳 <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">x</span></span></span></span> 所在的集合的 boss 並路徑壓縮</li>
+</ul>
+</li>
+<li><code>int U(int x, int y)</code>
+<ul>
+<li><strong>均攤</strong> <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathcal" style="margin-right:0.02778em;">O</span></span><span class="mopen">(</span><span class="mop">lo<span style="margin-right:0.01389em;">g</span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">n</span><span class="mclose">)</span></span></span></span> 合併 <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">x</span></span></span></span> 與 <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span></span></span></span> 所在的集合，合併成功回傳 <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">1</span></span></span></span>，否則回傳 <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">0</span></span></span></span></li>
+</ul>
+</li>
+</ol>
+<details><summary>Code</summary>
+<pre><code class="language-cpp">struct DSU {
+    
+    vector&lt;int&gt; p;
+    int maxn;
+    
+    void init(int N) {
+        maxn = N + 1;
+        p.resize(maxn), iota(ALL(p), 0);
+    }
+    
+    int R(int x) { return x ^ p[x] ? p[x] = R(p[x]) : x; }
+    int U(int x, int y) { return (x = R(x)) ^ (y = R(y)) ? p[x] = y, 1 : 0; }
+    
+};
+</code></pre>
+</details>
 <h2 id="lowest-common-ancestor"><a class="header" href="#lowest-common-ancestor">Lowest Common Ancestor</a></h2>
 <ul>
 <li><a href="https://contest.yandex.com/contest/70295/problems/E/">https://contest.yandex.com/contest/70295/problems/E/</a>
@@ -226,7 +262,7 @@
 </li>
 </ol>
 <div class="warning">
-支援不連通的森林，但在做 LCA 時，請確保 <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">u</span></span></span></span> 與 <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">v</span></span></span></span> 連通
+<p>支援不連通的森林，但在做 LCA 時，請確保 <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">u</span></span></span></span> 與 <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">v</span></span></span></span> 連通</p>
 </div>
 <details><summary>Code</summary>
 <pre><code class="language-cpp">struct LCA {
@@ -317,6 +353,156 @@
 };
 </code></pre>
 </details>
+<h2 id="lowest-common-ancestor-with-information-on-edges"><a class="header" href="#lowest-common-ancestor-with-information-on-edges">Lowest Common Ancestor with Information on Edges</a></h2>
+<p>支援操作（基本同上）：</p>
+<ol>
+<li><code>void init(int n)</code>
+<ul>
+<li>初始化點集合為 <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">[</span><span class="mord">0</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">n</span><span class="mclose">]</span></span></span></span>，代表 <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">0</span></span></span></span>-base 或 <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">1</span></span></span></span>-base 皆可</li>
+</ul>
+</li>
+<li><code>void add_edge(int u, int v, const Info &amp;info)</code>
+<ul>
+<li>加無向不帶權的邊 <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord mathnormal">u</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">v</span><span class="mclose">)</span></span></span></span>，邊上帶有資訊 <code>info</code></li>
+</ul>
+</li>
+<li><code>void build()</code>
+<ul>
+<li><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">⟨</span><span class="mord"><span class="mord mathcal" style="margin-right:0.02778em;">O</span></span><span class="mopen">(</span><span class="mord mathnormal">n</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mop">lo<span style="margin-right:0.01389em;">g</span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">n</span><span class="mclose">)</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mord mathcal" style="margin-right:0.02778em;">O</span></span><span class="mopen">(</span><span class="mord mathnormal">n</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mop">lo<span style="margin-right:0.01389em;">g</span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">n</span><span class="mclose">)⟩</span></span></span></span> DFS + 建跳表</li>
+</ul>
+</li>
+<li><code>pair&lt;int, Info&gt; lca_jump(int u, int v)</code>
+<ul>
+<li><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathcal" style="margin-right:0.02778em;">O</span></span><span class="mopen">(</span><span class="mop">lo<span style="margin-right:0.01389em;">g</span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">n</span><span class="mclose">)</span></span></span></span> 找 <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">u</span></span></span></span> 與 <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">v</span></span></span></span> 的最近共同祖先</li>
+</ul>
+</li>
+<li><code>Info get_info(int u, int v)</code>
+<ul>
+<li><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathcal" style="margin-right:0.02778em;">O</span></span><span class="mopen">(</span><span class="mop">lo<span style="margin-right:0.01389em;">g</span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">n</span><span class="mclose">)</span></span></span></span> 回傳 <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">u</span></span></span></span> 與 <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">v</span></span></span></span> 之間的邊上的資訊（只是 call 了一次 <code>lca_jump</code>）</li>
+</ul>
+</li>
+<li><code>int jump(int u, int k)</code> <em><strong>untested</strong></em>
+<ul>
+<li><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathcal" style="margin-right:0.02778em;">O</span></span><span class="mopen">(</span><span class="mop">lo<span style="margin-right:0.01389em;">g</span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">n</span><span class="mclose">)</span></span></span></span> 找 <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">u</span></span></span></span> 往上第 <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span></span></span></span> 個祖先</li>
+</ul>
+</li>
+<li><code>int dist(int u, int v)</code>
+<ul>
+<li><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathcal" style="margin-right:0.02778em;">O</span></span><span class="mopen">(</span><span class="mord">1</span><span class="mclose">)</span></span></span></span> 找 <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">u</span></span></span></span> 與 <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">v</span></span></span></span> 的距離</li>
+</ul>
+</li>
+</ol>
+<div class="warning">
+<p>需要自定義 <code>struct Info</code>，並實作</p>
+<ul>
+<li><code>Info()</code> (default constructor)</li>
+<li><code>Info&amp; operator += (const Info &amp;rhs)</code></li>
+<li><code>friend Info operator + (Info lhs, const Info &amp;rhs)</code></li>
+</ul>
+</div>
+<div class="warning">
+<p>此處的資訊是無向的，必須滿足交換律才能使用，否則還需稍作修改</p>
+</div>
+<details><summary>Code</summary>
+<pre><code class="language-cpp">template &lt;typename Info&gt;
+struct LCA {
+    
+    vector&lt;vector&lt;pair&lt;int, Info&gt;&gt;&gt; adj;
+    vector&lt;vector&lt;pair&lt;int, Info&gt;&gt;&gt; anc;
+    vector&lt;int&gt; dep, dfn_i, dfn_o;
+    int lgmx, maxn;
+    
+    void init(int N) {
+        maxn = N + 1;
+        lgmx = __lg(maxn) + 2;
+        adj.resize(maxn);
+        anc.assign(lgmx, vector(maxn, make_pair(int(0), Info())));
+        dep.assign(maxn, 0);
+        dfn_i.assign(maxn, -1);
+        dfn_o.assign(maxn, -1);
+    }
+    
+    void add_edge(int u, int v, const Info &amp;info) {
+        adj[u].eb(v, info), adj[v].eb(u, info);
+    }
+    
+    void build() {
+        function&lt;void(int, int)&gt; dfs = [&amp;](int now, int lst) {
+            for (auto [x, info] : adj[now]) {
+                if (x == lst) continue;
+                dep[x] = dep[now] + 1, dfs(x, now);
+                anc[0][x] = {now, info};
+            }
+        };
+        for (int i = 0; i &lt; maxn; ++i) { if (dfn_i[i] == -1) dfs(i, i); }
+        
+        for (int lay = 1; lay &lt; lgmx; ++lay) {
+            for (int i = 0; i &lt; maxn; ++i) {
+                int p = anc[lay-1][i].first;
+                anc[lay][i].first = anc[lay-1][p].first;
+                anc[lay][i].second = anc[lay-1][i].second + anc[lay-1][p].second;
+            }
+        }
+        
+        // debug(dep);
+    }
+    
+    pair&lt;int, Info&gt; lca_jump(int u, int v) {
+        if (dep[u] &lt; dep[v]) swap(u, v);
+        Info ans;
+        for (int lay = lgmx-1, dif = dep[u] - dep[v]; lay &gt;= 0; --lay) {
+            if (dif &gt;&gt; lay &amp; 1) ans += anc[lay][u].second, u = anc[lay][u].first;
+        }
+        if (u == v) return {u, ans};
+        for (int lay = lgmx-1; lay &gt;= 0; --lay) {
+            if (anc[lay][u].first != anc[lay][v].first) {
+                ans += anc[lay][u].second, u = anc[lay][u].first;
+                ans += anc[lay][v].second, v = anc[lay][v].first;
+            }
+        }
+        ans += anc[0][u].second, u = anc[0][u].first;
+        ans += anc[0][v].second, v = anc[0][v].first;
+        return {u, ans};
+    }
+    
+    Info get_info(int u, int v) {
+        return lca_jump(u, v).second;
+    }
+    
+    int jump(int u, int k) {
+        for (int lay = lgmx-1; lay &gt;= 0; --lay) {
+            if (k &gt;&gt; lay &amp; 1) u = anc[lay][u].first;
+        }
+        return u;
+    }
+    
+    int dist(int u, int v) {
+        auto [c, info] = lca_jump(u, v);
+        return dep[u] + dep[v] - 2 * dep[c];
+    }
+    
+};
+
+struct Info {
+    
+    int val;
+    
+    Info() : val(INT_MAX) {}
+    Info(int _val) : val(_val) {}
+    
+    Info&amp; operator += (const Info &amp;rhs) {
+        val = min(val, rhs.val);
+        return *this;
+    }
+    
+    friend Info operator + (Info lhs, const Info &amp;rhs) {
+        lhs.val = min(lhs.val, rhs.val);
+        return lhs;
+    }
+    
+};
+</code></pre>
+</details>
 
                     </main>
 
@@ -341,6 +527,22 @@
 
         </div>
 
+        <!-- Livereload script (if served using the cli tool) -->
+        <script>
+            const wsProtocol = location.protocol === 'https:' ? 'wss:' : 'ws:';
+            const wsAddress = wsProtocol + "//" + location.host + "/" + "__livereload";
+            const socket = new WebSocket(wsAddress);
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload();
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
 
 
 
