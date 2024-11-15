@@ -17,4 +17,4 @@ additional-css = ["settings/log.css", "settings/custom.css"]
 
 [output.html.fold]
 enable = true
-level = 0
+level = 2

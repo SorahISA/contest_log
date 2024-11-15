@@ -9,3 +9,4 @@
 \tor:{\textsc{ or }}
 \txor:{\textsc{ xor }}
 \Arr:{\left\langle #1 \right\rangle}
+\Claim:{\textbf{Claim #1.}}

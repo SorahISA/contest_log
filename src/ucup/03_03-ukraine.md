@@ -22,6 +22,10 @@
 
 這場難度在 UCup 中算很低，最強的 USA1 甚至在兩個小時以內就破台了。
 
+
+
+
+
 ## [Problem A. Aibohphobia](https://qoj.ac/contest/1714/problem/8829)
 
 ##### Tags: `casework`, `palindrome`  
@@ -34,6 +38,10 @@
 
 當有三種以上的字元時，將字串排序並 `reverse(1 + ALL(s))` 後輸出即可。
 
+
+
+
+
 ## [Problem B. Breaking Bad](https://qoj.ac/contest/1714/problem/8830)
 
 待補
@@ -41,6 +49,10 @@
 > 給定一個 $n \times n$ 的矩陣 $A$，請問在所有 $1, 2, \ldots, n$ 的排列 $\sigma$ 中，$\left( \sum_{i=1}^{n} A_{i, \sigma_i} \right) \bmod 5$ 可能有哪些值。
 >
 > * $n \le 1000$
+
+
+
+
 
 ## [Problem C. Chemistry Class](https://qoj.ac/contest/1714/problem/8831)
 
@@ -71,6 +83,10 @@
 
 因為這總是保證了最多的好配對，所以 greedy 可以得到最佳解。
 
+
+
+
+
 ## [Problem D. Daily Disinfection](https://qoj.ac/contest/1714/problem/8832)
 
 ##### Tags: `casework`
@@ -82,6 +98,10 @@
 每個 `1` 都一定要移開，假設 $s_1 =$ `0` 那每個 `1` 都一定能往右移動。
 
 觀察到只有在 `1.101.101.101.1` 這種 case（頭尾都是 `1` 且沒有連續的 `0`）才會讓 `1` 必須被挪動第二次，此時一定是挪動最小塊的連續 `1`。
+
+
+
+
 
 ## [Problem E. Equalizer Ehrmantraut](https://qoj.ac/contest/1714/problem/8833)
 
@@ -106,6 +126,10 @@ $$
 
 即可 $\Ord(m \log n)$ 求解。
 
+
+
+
+
 ## [Problem F. Formal Fring](https://qoj.ac/contest/1714/problem/8834)
 
 待補
@@ -116,6 +140,10 @@ $$
 >
 > * $X \le 10^6$
 
+
+
+
+
 ## [Problem G. Goodman](https://qoj.ac/contest/1714/problem/8835)
 
 AC 但還不會證明，待補
@@ -125,6 +153,10 @@ AC 但還不會證明，待補
 > 給定一個排列 $p$，請求出一個排列 $q$ 使 $\lvert \text{LCS}(\Arr{q}, \Arr{p \circ q}) \rvert$ 最大。
 >
 > * 多筆測資、$\sum n \le 10^6$
+
+
+
+
 
 ## [Problem H. Highway Hoax](https://qoj.ac/contest/1714/problem/8836)
 
@@ -152,9 +184,13 @@ AC 但還不會證明，待補
 
 一個方便的 $\Ord(n \log^2 n)$ trick 是把所有多項式丟進 queue（deque）裡，每次取出前兩個做事之後再放到最後面，這個的複雜度可以透過參考線段樹的長相感性證明。
 
+
+
+
+
 ## [Problem I. Increasing Income](https://qoj.ac/contest/1714/problem/8837)
 
-待補
+##### Tags: `dp`
 
 > 定義兩個 $1, 2, \ldots, n$ 的 permutation $p, q$ 的複合 $\Arr{p \circ q}$ 為 $(p_{q_1}, p_{q_2}, \ldots, p_{q_n})$。
 >
@@ -163,6 +199,33 @@ AC 但還不會證明，待補
 > - $f(a_1, a_2, \ldots, a_k)$ 是 $\# \{ i : \forall j < i. a_i > a_j \}$，也就是前綴最大值數量。
 >
 > * 多筆測資、$\sum n \le 10^6$
+
+- $\Claim{1}$ 首先，一定有下界 $n + 1$ 跟上界 $n + \lvert \text{LIS} \rvert$。
+
+<details><summary><i>Proof</i></summary>
+
+- 下界：$\Arr{q} = (1, 2, \ldots, n)$ 時答案必定 $\ge n + 1$。
+- 上界：如果答案 $> \lvert \text{LIS} \rvert$，那一定有至少 $\lvert \text{LIS} \rvert + 1$ 個位置在 $\Arr{q}$ 跟 $\Arr{p \circ q}$ 之中都有貢獻。  
+  把那些有貢獻的位置抓出來，他們會形成更長的 LIS，產生矛盾。
+
+</details>
+
+現在考慮如何構造滿足上界的答案，首先先把 LIS $L$ 抓出來（$L = (p_{i_1}, p_{i_2}, \ldots, p_{i_k})$ 滿足 $i_1 < i_2 < \cdots < i_k$ 且 $p_{i_1} < p_{i_2} < \cdots < p_{i_k}$）。
+
+接著要處理剩下的元素，先 **獨立** 觀察 $p_i$ 可以放的位置：
+
+- 在不破壞 $L$ 的貢獻的前提下插進 $L$ 裡面：當滿足 $i < i_j$ 且 $p_i < p_{i_j}$ 時可以將 $p_i$ 放到 $p_{i_{j-1}}$ 跟 $p_{i_j}$ 中。
+- 在讓自身能產生貢獻的前提下插進 $L$ 裡面：當滿足 $i > i_{j-1}$ 或 $p_i > p_{i_{j-1}}$ 時可以將 $p_i$ 放到 $p_{i_{j-1}}$ 跟 $p_{i_j}$ 中。
+
+總上兩點，可以得到當 $p_i$ 放在滿足 $i < i_j$ 且 $p_i < p_{i_j}$ 的最小的 $j$ 前面就能不破壞原有的貢獻並維持自身的貢獻。
+
+如果有多個 $p_i$ 可以放在 $p_{i_{j-1}}$ 跟 $p_{i_j}$ 之間，這些數字必定可以被分到兩類：$i > i_{j-1}$ 跟 $p_i > p_{i_{j-1}}$。每個數字必定且只滿足其中一個條件（否則就不會被放在這裡），只要確保所有第一類的數字依照位置 $i$ 排序、第二類的數字依照值 $p_i$ 排序，就能保證所有區間內的數字都有貢獻。
+
+時間複雜度：$\Ord(n \log n)$。
+
+
+
+
 
 ## [Problem J. Jesse's Job](https://qoj.ac/contest/1714/problem/8838)
 
@@ -185,15 +248,59 @@ AC 但還不會證明，待補
 
 至此，就得到了排好 $n-2$ 個數字的方法，而顯然在只有一個環的情況下不存在排好恰 $n-1$ 或 $n$ 個數字的方法。
 
+
+
+
+
 ## [Problem K. Knocker](https://qoj.ac/contest/1714/problem/8839)
 
-待補
+##### Tags: `dp`
 
 > 給定正整數陣列 $\Arr{a}$，你可以選擇若干數字 $p_1, p_2, \ldots, p_k$ 並令 $a_i' = ((a_i \bmod p_1) \bmod p_2) \cdots \bmod p_k$，請問有幾種可能的 $\Arr{a'}$？
 >
 > 模 $998\,244\,353$ 輸出。
 >
 > * $n \le 500$、$a_i \le 500$
+
+- $\Claim{1}$ 每次的 $\bmod$ 操作必定可以取 $p > \floor{\max(a_i) / 2}$。
+
+<details><summary><i>Proof</i></summary>
+
+此處我們嘗試證明當 $p$ 太小可以換成多個更大的 $p$ 達成相同操作。
+
+假設最大值 $\max(a_i) = kp + r$，那麼取 $p_1 = kp$ 也可以讓所有會被修改到的數字變成跟 $\bmod p$ 一樣，此後最大值必定 $< kp$。
+
+接著取 $p_2 = (k-1)p$、$p_3 = (k-2)p$，一直到 $p_k = p$，每次的操作只會把 $a_i = p_i + r \; (r < p)$ 的數字變成 $r$。
+
+注意到每次操作中剩下的數字最大是 $p_i + k - 1$，而 $p_i > p_i - 1 = \floor{(2 p_i - 1) / 2} \ge \floor{(p_i+k-1)/2}$ 顯然為真。
+
+</details>
+
+上述 Claim 1 的最大用處是把取 $\bmod$ 操作變成減法操作，注意對一個數字「減法」之後他會變成不到一半。
+
+- $\Claim{2}$ 對每個合法的狀態都存在一種每個數字只被「減法」影響到至多一次的方案。
+
+<details><summary><i>Proof</i></summary>
+
+先將陣列由大到小排序過，可以發現一個「減法」操作影響到的是一段前綴，而且這段前綴在被「減法」之後仍然遞減。
+
+當有另一個減法操作（$-y$）影響到該區間時，該區間會變成「被 $-x$ 跟 $-y$ 影響到的前綴」跟「只被 $-x$ 操作影響到的後綴」。那不如將創造出這段區間的那次操作（$-x$）先變成 $-(x+y)$ 做完前綴，再做一次 $-x$ 操作解決後綴。
+
+注意到因為前綴數字 $< 2x$ by Claim 1，所以並不會被 $-(x+y)$ 跟 $-x$ 都影響到。
+
+</details>
+
+將陣列降序排序後，就可以來嘗試 DP 了：狀態 $\texttt{dp}[i][v]$ 代表 $a_i$ 是第一個沒有被「減法」的數字，且當前（為了不二次影響前面的數字）能取的 $p$ 下界是 $v$ 的陣列數量。
+
+轉移採用遞推，枚舉合法的 $p$ 作為轉移，維護會被影響到的數字（$a_j < p$ 的最小 $j$），再拿滿足轉移條件的狀態 $\texttt{dp}[i][w]_{w \le p}$ 去更新 $\texttt{dp}[j][\max(w, a_i - p + 1)]$。
+
+時間複雜度：$\Ord(n C^2)$。
+
+轉移應該可以用前綴和壓掉一個 $\Ord(C)$，待補。
+
+
+
+
 
 ## [Problem L. Lalo's Lawyer Lost](https://qoj.ac/contest/1714/problem/8840)
 
