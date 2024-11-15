@@ -34,7 +34,7 @@
         <td title="Subway"                          class="table-na">F</td>
         <td title="Binary Tree"                     class="table-td">G</td>
         <td title="Border Jump 2"                   class="table-na">H</td>
-        <td title="Bingo"                           class="table-td">I</td>
+        <td title="Bingo"                           class="table-ac">I</td>
         <td title="Social Media"                    class="table-bl">J</td>
         <td title="Strips"                          class="table-bl">K</td>
         <td title="P \oplus Q = R"                  class="table-na">L</td>

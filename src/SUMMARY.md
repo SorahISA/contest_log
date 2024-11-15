@@ -9,7 +9,7 @@
 - [ICPC - Universal Cup]()
     - [Season 3]()
         - [Stage 3: Ukraine](./ucup/03_03-ukraine.md)
-        <!-- - [Stage 16: Nanjing](./ucup/03_16-nanjing.md) -->
+        - [Stage 16: Nanjing](./ucup/03_16-nanjing.md)
 
 <!-- - [ICPC - Africa and Arab]() -->
 <!-- - [ICPC - Asia East Continent]() -->
