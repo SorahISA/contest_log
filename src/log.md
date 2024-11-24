@@ -60,6 +60,68 @@
 
 ---
 
+## ICPC - Asia Pacific
+
+### Championship
+
+### Indonesia
+
+### Japan
+
+### South Korea
+
+<table>
+    <tr>
+        <th>Contest</th>
+        <th>A</th><th>B</th><th>C</th><th>D</th><th>E</th><th>F</th><th>G</th><th>H</th><th>I</th><th>J</th><th>K</th><th>L</th><th>M</th><th>N</th><th>O</th>
+    </tr>
+    <tr>
+        <td><a href="./icpc/asia_pacific/south_korea/24-25_seoul.md">2024-2025 Seoul</a></td>
+        <td title="A. Bottles"              class="table-bl">A</td>
+        <td title="B. Cards Flipping"       class="table-ac">B</td>
+        <td title="C. Colorful Quadrants"   class="table-na">C</td>
+        <td title="D. Ladder Update"        class="table-na">D</td>
+        <td title="E. Mausoleum"            class="table-na">E</td>
+        <td title="F. Pair Sorting"         class="table-na">F</td>
+        <td title="G. Palindromic Length"   class="table-na">G</td>
+        <td title="H. Protecting Kingdom"   class="table-na">H</td>
+        <td title="I. Square Stamping"      class="table-na">I</td>
+        <td title="J. Street Development"   class="table-td">J</td>
+        <td title="K. String Rank"          class="table-na">K</td>
+        <td title="L. Triangle"             class="table-ac">L</td>
+    </tr>
+</table>
+
+### Taiwan
+
+<table>
+    <tr>
+        <th>Contest</th>
+        <th>A</th><th>B</th><th>C</th><th>D</th><th>E</th><th>F</th><th>G</th><th>H</th><th>I</th><th>J</th><th>K</th><th>L</th><th>M</th><th>N</th><th>O</th>
+    </tr>
+    <tr>
+        <td><a href="./icpc/asia_pacific/taiwan/24-25_taichung.md">2024-2025 Taichung</a></td>
+        <td title="A. The Bento Box Adventure"  class="table-ac">A</td>
+        <td title="B. Bowling Frame"            class="table-td">B</td>
+        <td title="C. Cube"                     class="table-td">C</td>
+        <td title="D. Drunken Maze"             class="table-ac">D</td>
+        <td title="E. Beautiful Array"          class="table-ac">E</td>
+        <td title="F. Segmentation Folds"       class="table-td">F</td>
+        <td title="G. Grid Game"                class="table-td">G</td>
+        <td title="H. Sheet Music"              class="table-ac">H</td>
+        <td title="I. Auto Complete"            class="table-td">I</td>
+        <td title="J. Bottle Arrangement"       class="table-na">J</td>
+        <td title="K. Trophic Balance Species"  class="table-na">K</td>
+        <td title="L. Building Castle"          class="table-na">L</td>
+        <td title="M. Selection Sort"           class="table-td">M</td>
+        <td title="N. Railway Construction"     class="table-na">N</td>
+    </tr>
+</table>
+
+### Vietnam
+
+---
+
 ## ICPC - Other
 
 <table>

@@ -14,12 +14,15 @@
 
 <!-- - [ICPC - Africa and Arab]() -->
 <!-- - [ICPC - Asia East Continent]() -->
-<!-- - [ICPC - Asia Pacific]()
+- [ICPC - Asia Pacific]()
+    - [Championship]()
     - [Indonesia]()
     - [Japan]()
-    - [Korea]()
+    - [South Korea]()
+        - [2024-2025 Seoul](./icpc/asia_pacific/south_korea/24-25_seoul.md)
     - [Taiwan]()
-    - [Vietnam]() -->
+        - [2024-2025 Taichung](./icpc/asia_pacific/taiwan/24-25_taichung.md)
+    - [Vietnam]()
 <!-- - [ICPC - Asia West Continent]()
     - [Iran]() -->
 <!-- - [ICPC - Europe]()
