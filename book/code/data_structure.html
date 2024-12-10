@@ -179,6 +179,145 @@
                     <main>
                         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
 <h1 id="data-structure"><a class="header" href="#data-structure">Data Structure</a></h1>
+<h2 id="disjoint-set-union"><a class="header" href="#disjoint-set-union">Disjoint Set Union</a></h2>
+<p>支援操作：</p>
+<ol>
+<li><code>void init(int n)</code>
+<ul>
+<li>初始化點集合為 <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">[</span><span class="mord">0</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">n</span><span class="mclose">]</span></span></span></span>，代表 <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">0</span></span></span></span>-base 或 <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">1</span></span></span></span>-base 皆可</li>
+</ul>
+</li>
+<li><code>int R(int x)</code>
+<ul>
+<li><strong>均攤</strong> <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathcal" style="margin-right:0.02778em;">O</span></span><span class="mopen">(</span><span class="mop">lo<span style="margin-right:0.01389em;">g</span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">n</span><span class="mclose">)</span></span></span></span> 回傳 <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">x</span></span></span></span> 所在的集合的 boss 並路徑壓縮</li>
+</ul>
+</li>
+<li><code>int U(int x, int y)</code>
+<ul>
+<li><strong>均攤</strong> <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathcal" style="margin-right:0.02778em;">O</span></span><span class="mopen">(</span><span class="mop">lo<span style="margin-right:0.01389em;">g</span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">n</span><span class="mclose">)</span></span></span></span> 合併 <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">x</span></span></span></span> 與 <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span></span></span></span> 所在的集合，合併成功回傳 <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">1</span></span></span></span>，否則回傳 <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">0</span></span></span></span></li>
+</ul>
+</li>
+</ol>
+<details><summary>Code</summary>
+<pre><code class="language-cpp">struct DSU {
+    
+    vector&lt;int&gt; p;
+    int maxn;
+    
+    void init(int N) {
+        maxn = N + 1;
+        p.resize(maxn), iota(ALL(p), 0);
+    }
+    
+    int R(int x) { return x ^ p[x] ? p[x] = R(p[x]) : x; }
+    int U(int x, int y) { return (x = R(x)) ^ (y = R(y)) ? p[x] = y, 1 : 0; }
+    
+};
+</code></pre>
+</details>
+<h2 id="disjoint-set-union-with-undo"><a class="header" href="#disjoint-set-union-with-undo">Disjoint Set Union with Undo</a></h2>
+<ul>
+<li><a href="https://oj.ntucpc.org/problems/856">https://oj.ntucpc.org/problems/856</a>
+<ul>
+<li>DSU with Undo 好題</li>
+</ul>
+</li>
+</ul>
+<p>支援操作：</p>
+<ol>
+<li><code>void init(int n)</code>
+<ul>
+<li>初始化點集合為 <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">[</span><span class="mord">0</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">n</span><span class="mclose">]</span></span></span></span>，代表 <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">0</span></span></span></span>-base 或 <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">1</span></span></span></span>-base 皆可</li>
+</ul>
+</li>
+<li><code>int R(int x)</code>
+<ul>
+<li><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathcal" style="margin-right:0.02778em;">O</span></span><span class="mopen">(</span><span class="mop">lo<span style="margin-right:0.01389em;">g</span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">n</span><span class="mclose">)</span></span></span></span> 回傳 <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">x</span></span></span></span> 所在的集合的 boss</li>
+</ul>
+</li>
+<li><code>int U(int x, int y)</code>
+<ul>
+<li><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathcal" style="margin-right:0.02778em;">O</span></span><span class="mopen">(</span><span class="mop">lo<span style="margin-right:0.01389em;">g</span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">n</span><span class="mclose">)</span></span></span></span> <strong>啟發式</strong> 合併 <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">x</span></span></span></span> 與 <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span></span></span></span> 所在的集合，合併成功回傳 <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">1</span></span></span></span>，否則回傳 <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">0</span></span></span></span></li>
+</ul>
+</li>
+<li><code>void undo()</code>
+<ul>
+<li>回復上一次的有效 <code>U(x, y)</code> 操作</li>
+</ul>
+</li>
+</ol>
+<details><summary>Code</summary>
+<pre><code class="language-cpp">struct DSU {
+    
+    vector&lt;int&gt; p, sz;
+    vector&lt;tuple&lt;int, int, int, int&gt;&gt; ops;
+    int maxn;
+    
+    void init(int N) {
+        maxn = N + 1;
+        p.resize(maxn), iota(ALL(p), 0);
+        sz.assign(maxn, 1);
+    }
+    
+    int R(int x) { return p[x] ^ x ? R(p[x]) : x; }
+    
+    int U(int x, int y) {
+        x = R(x), y = R(y);
+        if (x == y) return 0;
+        if (sz[x] &gt; sz[y]) swap(x, y);
+        ops.eb(x, y, p[x], sz[y]);
+        return sz[y] += sz[x], p[x] = y, 1;
+    }
+    
+    void undo() {
+        auto [x, y, p_x, sz_y] = ops.back(); ops.pb();
+        p[x] = p_x, sz[y] = sz_y;
+    }
+    
+};
+</code></pre>
+</details>
+<details><summary>Code with 離散化</summary>
+<pre><code class="language-cpp">struct DSU {
+    
+    vector&lt;int&gt; p, sz;
+    vector&lt;tuple&lt;int, int, int, int&gt;&gt; ops;
+    vector&lt;int&gt; disc;
+    int maxn;
+    
+    void init(const vector&lt;int&gt; _disc) {
+        disc = _disc, maxn = SZ(disc);
+        p.resize(maxn), iota(ALL(p), 0);
+        sz.assign(maxn, 1);
+    }
+    
+    int _R(int x) { return p[x] ^ x ? _R(p[x]) : x; }
+    int R(int x) {
+        int id_x = lower_bound(ALL(disc), x) - begin(disc);
+        return _R(id_x);
+    }
+    
+    int _U(int x, int y) {
+        x = _R(x), y = _R(y);
+        if (x == y) return 0;
+        if (sz[x] &gt; sz[y]) swap(x, y);
+        ops.eb(x, y, p[x], sz[y]);
+        return sz[y] += sz[x], p[x] = y, 1;
+    }
+    int U(int x, int y) {
+        int id_x = lower_bound(ALL(disc), x) - begin(disc);
+        int id_y = lower_bound(ALL(disc), y) - begin(disc);
+        return _U(id_x, id_y);
+    }
+    
+    void undo() {
+        auto [x, y, p_x, sz_y] = ops.back(); ops.pb();
+        p[x] = p_x, sz[y] = sz_y;
+    }
+    
+};
+</code></pre>
+</details>
 <h2 id="interval-container"><a class="header" href="#interval-container">Interval Container</a></h2>
 <ul>
 <li><a href="https://oj.ntucpc.org/problems/853">https://oj.ntucpc.org/problems/853</a>
@@ -194,7 +333,7 @@
 </ul>
 <p>宣告：</p>
 <ul>
-<li><code>IntervalContainer&lt;int&gt; ic</code>
+<li><code>IntervalContainer&lt;int&gt; itv;</code>
 <ul>
 <li>儲存 <code>int</code> 型別的資訊</li>
 </ul>
@@ -300,6 +439,22 @@ struct IntervalContainer {
 
         </div>
 
+        <!-- Livereload script (if served using the cli tool) -->
+        <script>
+            const wsProtocol = location.protocol === 'https:' ? 'wss:' : 'ws:';
+            const wsAddress = wsProtocol + "//" + location.host + "/" + "__livereload";
+            const socket = new WebSocket(wsAddress);
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload();
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
 
 
 

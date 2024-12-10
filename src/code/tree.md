@@ -2,27 +2,6 @@
 
 
 
-## Disjoint Set Union
-
-支援操作：
-
-1. `void init(int n)`
-    - 初始化點集合為 $[0, n]$，代表 $0$-base 或 $1$-base 皆可
-2. `int R(int x)`
-    - **均攤** $\Ord(\log n)$ 回傳 $x$ 所在的集合的 boss 並路徑壓縮
-3. `int U(int x, int y)`
-    - **均攤** $\Ord(\log n)$ 合併 $x$ 與 $y$ 所在的集合，合併成功回傳 $1$，否則回傳 $0$
-
-<details><summary>Code</summary>
-
-```cpp
-{{ #include ./tree/dsu.cpp }}
-```
-
-</details>
-
-
-
 ## Lowest Common Ancestor
 
 - <https://contest.yandex.com/contest/70295/problems/E/>
