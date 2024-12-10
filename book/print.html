@@ -93,7 +93,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="log.html">比賽補題紀錄</a></li><li class="chapter-item expanded "><a href="my_problems/my_problems.html">我的題目</a></li><li class="chapter-item expanded "><div>個別好題</div></li><li class="chapter-item expanded "><div>ICPC - Universal Cup</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><div>Season 3</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="ucup/03_03-ukraine.html">Stage 3: Ukraine</a></li><li class="chapter-item "><a href="ucup/03_14-harbin.html">Stage 14: Harbin</a></li><li class="chapter-item "><a href="ucup/03_16-nanjing.html">Stage 16: Nanjing</a></li></ol></li></ol></li><li class="chapter-item expanded "><div>ICPC - Asia Pacific</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><div>Championship</div></li><li class="chapter-item expanded "><div>Indonesia</div></li><li class="chapter-item expanded "><div>Japan</div></li><li class="chapter-item expanded "><div>South Korea</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="icpc/asia_pacific/south_korea/24-25_seoul.html">2024-2025 Seoul</a></li></ol></li><li class="chapter-item expanded "><div>Taiwan</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="icpc/asia_pacific/taiwan/24-25_taichung.html">2024-2025 Taichung</a></li></ol></li><li class="chapter-item expanded "><div>Vietnam</div></li></ol></li><li class="chapter-item expanded "><div>ICPC - Other</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="others/gym105542.html">2024-2025 CTU Open Contest</a></li></ol></li><li class="chapter-item expanded "><div>Code Templates</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="code/tree.html">Tree Algorithms</a></li></ol></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="log.html">比賽補題紀錄</a></li><li class="chapter-item expanded "><a href="my_problems/my_problems.html">我的題目</a></li><li class="chapter-item expanded "><div>個別好題</div></li><li class="chapter-item expanded "><div>ICPC - Universal Cup</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><div>Season 3</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="ucup/03_03-ukraine.html">Stage 3: Ukraine</a></li><li class="chapter-item "><a href="ucup/03_14-harbin.html">Stage 14: Harbin</a></li><li class="chapter-item "><a href="ucup/03_16-nanjing.html">Stage 16: Nanjing</a></li></ol></li></ol></li><li class="chapter-item expanded "><div>ICPC - Asia Pacific</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><div>Championship</div></li><li class="chapter-item expanded "><div>Indonesia</div></li><li class="chapter-item expanded "><div>Japan</div></li><li class="chapter-item expanded "><div>South Korea</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="icpc/asia_pacific/south_korea/24-25_seoul.html">2024-2025 Seoul</a></li></ol></li><li class="chapter-item expanded "><div>Taiwan</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="icpc/asia_pacific/taiwan/24-25_taichung.html">2024-2025 Taichung</a></li></ol></li><li class="chapter-item expanded "><div>Vietnam</div></li></ol></li><li class="chapter-item expanded "><div>ICPC - Other</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="others/gym105542.html">2024-2025 CTU Open Contest</a></li></ol></li><li class="chapter-item expanded "><div>Code Templates</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="code/data_structure.html">Data Structures</a></li><li class="chapter-item expanded "><a href="code/tree.html">Tree Algorithms</a></li></ol></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle">
                 <div class="sidebar-resize-indicator"></div>
@@ -1296,6 +1296,99 @@ for (int x : arr | views::reverse) {
 </ul>
 </li>
 </ul>
+<div style="break-before: page; page-break-before: always;"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+<h1 id="data-structure"><a class="header" href="#data-structure">Data Structure</a></h1>
+<h2 id="interval-container"><a class="header" href="#interval-container">Interval Container</a></h2>
+<ul>
+<li><a href="https://oj.ntucpc.org/problems/853">https://oj.ntucpc.org/problems/853</a>
+<ul>
+<li>區間修改，區間移除並計算每個數字的出現次數平方和</li>
+</ul>
+</li>
+<li><a href="https://codeforces.com/contest/896/problem/C">https://codeforces.com/contest/896/problem/C</a>
+<ul>
+<li>珂朵莉樹模板</li>
+</ul>
+</li>
+</ul>
+<p>宣告：</p>
+<ul>
+<li><code>IntervalContainer&lt;int&gt; ic</code>
+<ul>
+<li>儲存 <code>int</code> 型別的資訊</li>
+</ul>
+</li>
+</ul>
+<p>支援操作：</p>
+<ol>
+<li><code>void cut(int p)</code>
+<ul>
+<li>將 <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7778em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">p</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">1</span></span></span></span> 跟 <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">p</span></span></span></span> 切開（helper function，應該不會被直接呼叫）</li>
+</ul>
+</li>
+<li><code>void modify(int l, int r, T v)</code>
+<ul>
+<li>將 <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">[</span><span class="mord">ℓ</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">r</span><span class="mclose">]</span></span></span></span> 區間的值修改為 <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">v</span></span></span></span></li>
+</ul>
+</li>
+<li><code>vector&lt;pair&lt;pii, T&gt;&gt; get(int l, int r)</code>
+<ul>
+<li>取得 <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">[</span><span class="mord">ℓ</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">r</span><span class="mclose">]</span></span></span></span> 區間的值</li>
+</ul>
+</li>
+<li><code>vector&lt;pair&lt;pii, T&gt;&gt; remove(int l, int r)</code>
+<ul>
+<li>將 <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">[</span><span class="mord">ℓ</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">r</span><span class="mclose">]</span></span></span></span> 區間的值移除，並回傳被移除的區間與值</li>
+</ul>
+</li>
+</ol>
+<details><summary>Code</summary>
+<pre><code class="language-cpp">template &lt;typename T&gt;
+struct IntervalContainer {
+    
+    map&lt;pii, T&gt; itv;
+    
+    void cut(int p) { /// cut [p-1, p]
+        auto it = itv.lower_bound({p, p});
+        if (it == begin(itv)) return;
+        if (it != end(itv) and it-&gt;first.first == p) return;
+        it = prev(it);
+        if (it-&gt;first.second &lt; p) return;
+        auto [lr, v] = *it; auto [l, r] = lr;
+        it = itv.erase(it);
+        it = itv.emplace_hint(it, pii(l, p-1), v);
+        it = itv.emplace_hint(it, pii(p, r), v);
+    }
+    
+    void modify(int l, int r, T v) {
+        cut(l), cut(r+1);
+        auto it_L = itv.lower_bound({l, l});
+        auto it_R = itv.lower_bound({r+1, r+1});
+        auto it = itv.erase(it_L, it_R);
+        itv.emplace_hint(it, pii(l, r), v);
+    }
+    
+    vector&lt;pair&lt;pii, T&gt;&gt; get(int l, int r) {
+        cut(l), cut(r+1);
+        auto it_L = itv.lower_bound({l, l});
+        auto it_R = itv.lower_bound({r+1, r+1});
+        vector&lt;pair&lt;pii, T&gt;&gt; ret;
+        while (it_L != it_R) ret.eb(*it_L), it_L = next(it_L);
+        return ret;
+    }
+    
+    vector&lt;pair&lt;pii, T&gt;&gt; remove(int l, int r) {
+        cut(l), cut(r+1);
+        auto it_L = itv.lower_bound({l, l});
+        auto it_R = itv.lower_bound({r+1, r+1});
+        vector&lt;pair&lt;pii, T&gt;&gt; ret;
+        while (it_L != it_R) ret.eb(*it_L), it_L = itv.erase(it_L);
+        return ret;
+    }
+    
+};
+</code></pre>
+</details>
 <div style="break-before: page; page-break-before: always;"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
 <h1 id="tree-algorithm"><a class="header" href="#tree-algorithm">Tree Algorithm</a></h1>
 <h2 id="disjoint-set-union"><a class="header" href="#disjoint-set-union">Disjoint Set Union</a></h2>

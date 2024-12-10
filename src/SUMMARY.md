@@ -39,4 +39,5 @@
     - [2024-2025 CTU Open Contest](./others/gym105542.md)
 
 - [Code Templates]()
+    - [Data Structures](./code/data_structure.md)
     - [Tree Algorithms](./code/tree.md)
