@@ -7,21 +7,28 @@
 - [個別好題]()
 
 - [ICPC - Universal Cup]()
+    - [Season 1]()
+        <!-- - [Stage 0: Nanjing](./ucup/01_00-nanjing.md) -->
     - [Season 3]()
         - [Stage 3: Ukraine](./ucup/03_03-ukraine.md)
         - [Stage 14: Harbin](./ucup/03_14-harbin.md)
         - [Stage 16: Nanjing](./ucup/03_16-nanjing.md)
+        <!-- - [Stage 24: Poland](./ucup/03_24-poland.md) -->
+        <!-- - [Stage 25: Hangzhou](./ucup/03_25-hangzhou.md) -->
 
 <!-- - [ICPC - Africa and Arab]() -->
 <!-- - [ICPC - Asia East Continent]() -->
 - [ICPC - Asia Pacific]()
     - [Championship]()
     - [Indonesia]()
+        <!-- - [2024-2025 Jakarta](./icpc/asia_pacific/indonesia/24_25-jakarta.md) -->
     - [Japan]()
+        <!-- - [2024-2025 Yokohama](./icpc/asia_pacific/japan/24_25-yokohama.md) -->
     - [South Korea]()
-        - [2024-2025 Seoul](./icpc/asia_pacific/south_korea/24-25_seoul.md)
+        <!-- - [2023-2024 Seoul](./icpc/asia_pacific/south_korea/23_24-seoul.md) -->
+        - [2024-2025 Seoul](./icpc/asia_pacific/south_korea/24_25-seoul.md)
     - [Taiwan]()
-        - [2024-2025 Taichung](./icpc/asia_pacific/taiwan/24-25_taichung.md)
+        - [2024-2025 Taichung](./icpc/asia_pacific/taiwan/24_25-taichung.md)
     - [Vietnam]()
 <!-- - [ICPC - Asia West Continent]()
     - [Iran]() -->
@@ -36,7 +43,10 @@
 <!-- - [ICPC - World Final]() -->
 
 - [ICPC - Other]()
-    - [2024-2025 CTU Open Contest](./others/gym105542.md)
+    - [2024-2025 CTU Open Contest](./others/cf-105542.md)
+    <!-- - [KTH Challenge 2020](./others/qoj-379.md) -->
+    <!-- - [Tokyo Tech Programming Contest 2024 (Div. 1)](./others/atc-ttpc2024_1.md) -->
+    <!-- - [2024-2025 ICPC, NERC, Southern and Volga Russian Regional Contest](./others/cf-2038.md) -->
 
 - [Code Templates]()
     - [Data Structures](./code/data_structure.md)

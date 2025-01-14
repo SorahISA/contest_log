@@ -111,7 +111,7 @@
 > - $\texttt{LTR}$：選擇最大的 $x$ 滿足 $\ell < x \le r$ 且 $\ell + x$ 是質數，並將區間縮小為 $[(\ell + x) / 2, r]$。
 > - $\texttt{RTL}$：選擇最小的 $x$ 滿足 $\ell \le x < r$ 且 $r + x$ 是質數，並將區間縮小為 $[\ell, (r + x) / 2]$。
 > 
-> <figure><img src="./24-25_taichung/F-sample.png" style="width: 80%;"/></figure>
+> <figure><img src="./24_25-taichung/F-sample.png" style="width: 80%;"/></figure>
 > 
 > 請輸出有幾種摺疊操作的序列可以使最後的區間長度最小。請輸出答案模 $998\,244\,353$ 的值。
 > 
@@ -139,7 +139,7 @@
 
 > 有一個 $n \times n$ 的白色棋盤，其中有 $q$ 個垂直的長條被塗成黑色的，保證白色的區塊四方位連通。請求出有多少個位置滿足該位置被塗黑之後白色的區塊不再四方位連通。
 > 
-> <figure><img src="./24-25_taichung/G-sample.png" style="width: 30%;"/></figure>
+> <figure><img src="./24_25-taichung/G-sample.png" style="width: 30%;"/></figure>
 > 
 > * 測資數量 $\le 125$、$n \le 10^9$、$\sum q \le 100\,000$
 
