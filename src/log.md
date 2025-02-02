@@ -57,6 +57,22 @@
         <td title="Ordainer of Inexorable Judgment" class="table-na">M</td>
     </tr>
     <tr>
+        <td><a href="./ucup/03_21-ookayama.md">Stage 21: Ōokayama</a></td>
+        <td title="Don't Detect Cycle"          class="table-na">A</td>
+        <td title="Self Checkout"               class="table-na">B</td>
+        <td title="Segment Tree"                class="table-na">C</td>
+        <td title="A xor B plus C"              class="table-na">D</td>
+        <td title="ReTravel"                    class="table-na">E</td>
+        <td title="Origami Warp"                class="table-na">F</td>
+        <td title="Diverge and Converge"        class="table-na">G</td>
+        <td title="Two Convex Sets"             class="table-na">H</td>
+        <td title="Near Pair"                   class="table-na">I</td>
+        <td title="Grid Construction"           class="table-na">J</td>
+        <td title="Sum is One"                  class="table-na">K</td>
+        <td title="Long Sequence Inversion 2"   class="table-na">L</td>
+        <td title="Cartesian Trees"             class="table-na">M</td>
+    </tr>
+    <tr>
         <td><a href="./ucup/03_24-poland.md">Stage 24: Poland</a></td>
         <td title="Acronym"                 class="table-bl">A</td>
         <td title="Baggage"                 class="table-td">B</td>

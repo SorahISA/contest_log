@@ -14,6 +14,7 @@
         - [Stage 14: Harbin](./ucup/03_14-harbin.md)
         - [Stage 16: Nanjing](./ucup/03_16-nanjing.md)
         - [Stage 28: Haidian Huangzhuang](./ucup/03_28-haidian_huangzhuang.md)
+        <!-- - [Stage 21: Ōokayama](./ucup/03_21-ookayama.md) -->
         <!-- - [Stage 24: Poland](./ucup/03_24-poland.md) -->
         <!-- - [Stage 25: Hangzhou](./ucup/03_25-hangzhou.md) -->
 
@@ -44,9 +45,9 @@
 <!-- - [ICPC - World Final]() -->
 
 - [ICPC - Other]()
-    - [2024-2025 CTU Open Contest](./others/cf-105542.md)
+    - [2024-2025 CTU Open Contest](./others/cf-105442.md)
     <!-- - [KTH Challenge 2020](./others/qoj-379.md) -->
-    <!-- - [Tokyo Tech Programming Contest 2024 (Div. 1)](./others/atc-ttpc2024_1.md) -->
+    <!-- - [Tokyo Tech Programming Contest 2024 (Div. 1)](./others/atc-ttpc2024_1.md) // to UCup3#21 -->
     <!-- - [2024-2025 ICPC, NERC, Southern and Volga Russian Regional Contest](./others/cf-2038.md) -->
 
 - [Code Templates]()
