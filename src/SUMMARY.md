@@ -13,6 +13,7 @@
         - [Stage 3: Ukraine](./ucup/03_03-ukraine.md)
         - [Stage 14: Harbin](./ucup/03_14-harbin.md)
         - [Stage 16: Nanjing](./ucup/03_16-nanjing.md)
+        - [Stage 28: Haidian Huangzhuang](./ucup/03_28-haidian_huangzhuang.md)
         <!-- - [Stage 24: Poland](./ucup/03_24-poland.md) -->
         <!-- - [Stage 25: Hangzhou](./ucup/03_25-hangzhou.md) -->
 
