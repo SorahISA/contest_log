@@ -87,6 +87,20 @@
         <td title="Let's Go! New Adventure"     class="table-na">L</td>
         <td title="Make It Divisible"           class="table-td">M</td>
     </tr>
+    <tr>
+        <td><a href="./ucup/03_28-haidian_huangzhuang.md">Stage 28: Haidian Huangzhuang</a></td>
+        <td title="Iron Warrior"                    class="table-na">A</td>
+        <td title="Little, Cyan, Fish!"             class="table-na">B</td>
+        <td title="Currency"                        class="table-ac">C</td>
+        <td title="Widely Known Problem"            class="table-na">D</td>
+        <td title="Light Drinking and Low Singing"  class="table-na">E</td>
+        <td title="Trash Problem"                   class="table-na">F</td>
+        <td title="Analysis"                        class="table-na">G</td>
+        <td title="Algebra"                         class="table-na">H</td>
+        <td title="Twenty-two"                      class="table-na">I</td>
+        <td title="Loving You in My Humble Way"     class="table-na">J</td>
+        <td title="Ying's Cup"                      class="table-na">K</td>
+    </tr>
 </table>
 
 ---
