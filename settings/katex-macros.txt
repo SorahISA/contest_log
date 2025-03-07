@@ -11,3 +11,4 @@
 \Arr:{\left\langle #1 \right\rangle}
 \Claim:{\textbf{Claim #1.}}
 \red:{{\color{red}{#1}}}
+\ast:{\star}

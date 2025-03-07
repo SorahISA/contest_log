@@ -130,6 +130,22 @@
         <th>Contest</th>
         <th>A</th><th>B</th><th>C</th><th>D</th><th>E</th><th>F</th><th>G</th><th>H</th><th>I</th><th>J</th><th>K</th><th>L</th><th>M</th>
     </tr>
+    <tr>
+        <td><a href="./icpc/asia_pacific/championship/24_25-championship.md">2024-2025 Championship</a></td>
+        <td title="Control Towers"              class="table-td">A</td>
+        <td title="Three-Dimensional Embedding" class="table-na">B</td>
+        <td title="Cactus Connectivity"         class="table-na">C</td>
+        <td title="Tower of Hanoi"              class="table-na">D</td>
+        <td title="Minus Operator"              class="table-na">E</td>
+        <td title="Hold the Star"               class="table-na">F</td>
+        <td title="Corrupted File"              class="table-ac">G</td>
+        <td title="Secret Lilies and Roses"     class="table-ac">H</td>
+        <td title="Squares on Grid Lines"       class="table-na">I</td>
+        <td title="Gathering Sharks"            class="table-ac">J</td>
+        <td title="Book Sorting"                class="table-na">K</td>
+        <td title="Boarding Queue"              class="table-ac">L</td>
+        <td title="Can You Reach There?"        class="table-na">M</td>
+    </tr>
 </table>
 
 ### Indonesia

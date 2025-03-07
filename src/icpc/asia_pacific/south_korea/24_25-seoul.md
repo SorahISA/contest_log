@@ -1,6 +1,6 @@
 # 2024 ICPC Asia Seoul Regional Programming Contest
 
-- 連結：N/A
+- 連結：<https://www.acmicpc.net/category/detail/4348>
 - 時間：2024 Nov 17, 09:30-14:30
 - 團隊：ネクロマンサー (SorahISA)
 - 成績：4 / 12, Penalty 185, dirt 33% (

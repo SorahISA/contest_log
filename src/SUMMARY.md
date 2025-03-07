@@ -9,6 +9,8 @@
 - [ICPC - Universal Cup]()
     - [Season 1]()
         <!-- - [Stage 0: Nanjing](./ucup/01_00-nanjing.md) -->
+    - [Season 2]()
+        <!-- - [Stage 7: Two Capitals](./ucup/02_07-two_capitals.md) -->
     - [Season 3]()
         - [Stage 3: Ukraine](./ucup/03_03-ukraine.md)
         - [Stage 14: Harbin](./ucup/03_14-harbin.md)
@@ -22,6 +24,7 @@
 <!-- - [ICPC - Asia East Continent]() -->
 - [ICPC - Asia Pacific]()
     - [Championship]()
+        - [2024-2025 Championship](./icpc/asia_pacific/championship/24_25-championship.md)
     - [Indonesia]()
         <!-- - [2024-2025 Jakarta](./icpc/asia_pacific/indonesia/24_25-jakarta.md) -->
     - [Japan]()
@@ -32,8 +35,10 @@
     - [Taiwan]()
         - [2024-2025 Taichung](./icpc/asia_pacific/taiwan/24_25-taichung.md)
     - [Vietnam]()
-<!-- - [ICPC - Asia West Continent]()
-    - [Iran]() -->
+- [ICPC - Asia West Continent]()
+    - [Iran]()
+        <!-- - [2020-2021 Tehran](./icpc/asia_pacific/south_korea/20_21-tehran.md) -->
+        <!-- - [2023-2024 Tehran](./icpc/asia_pacific/south_korea/23_24-tehran.md) -->
 <!-- - [ICPC - Europe]()
     - [Central Europe (CERC)]()
     - [Northwestern Europe (NWERC)]()
@@ -47,6 +52,7 @@
 - [ICPC - Other]()
     - [2024-2025 CTU Open Contest](./others/cf-105442.md)
     <!-- - [KTH Challenge 2020](./others/qoj-379.md) -->
+    <!-- - [Russia Team Open High School Programming Contest 2023](./others/qoj-1709.md) -->
     <!-- - [Tokyo Tech Programming Contest 2024 (Div. 1)](./others/atc-ttpc2024_1.md) // to UCup3#21 -->
     <!-- - [2024-2025 ICPC, NERC, Southern and Volga Russian Regional Contest](./others/cf-2038.md) -->
 
