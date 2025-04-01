@@ -121,6 +121,39 @@
 
 ---
 
+## ICPC - Africa and Arab
+
+---
+
+## ICPC - Asia East Continent
+
+### Final
+
+<table>
+    <tr>
+        <th>Contest</th>
+        <th>A</th><th>B</th><th>C</th><th>D</th><th>E</th><th>F</th><th>G</th><th>H</th><th>I</th><th>J</th><th>K</th><th>L</th><th>M</th>
+    </tr>
+    <tr>
+        <td><a href="./icpc/asia_east_continent/ecfinal/21_22-ecfinal.md">2021-2022 EC Final</a></td>
+        <td title="DFS Order"               class="table-na">A</td>
+        <td title="Beautiful String"        class="table-td">B</td>
+        <td title="String-dle Count"        class="table-na">C</td>
+        <td title="Two Walls"               class="table-na">D</td>
+        <td title="Prof. Pang and Poker"    class="table-na">E</td>
+        <td title="Vacation"                class="table-na">F</td>
+        <td title="Check Pattern is Bad"    class="table-na">G</td>
+        <td title="Check Pattern is Good"   class="table-na">H</td>
+        <td title="Future Coder"            class="table-td">I</td>
+        <td title="Elden Ring"              class="table-na">J</td>
+        <td title="Vision Test"             class="table-na">K</td>
+        <td title="Fenwick Tree"            class="table-na">L</td>
+        <td title="Prof. Pang and Ants"     class="table-na">M</td>
+    </tr>
+</table>
+
+---
+
 ## ICPC - Asia Pacific
 
 ### Championship
@@ -154,6 +187,22 @@
     <tr>
         <th>Contest</th>
         <th>A</th><th>B</th><th>C</th><th>D</th><th>E</th><th>F</th><th>G</th><th>H</th><th>I</th><th>J</th><th>K</th><th>L</th><th>M</th>
+    </tr>
+    <tr>
+        <td><a href="./icpc/asia_pacific/indonesia/20_21-jakarta.md">2020-2021 Jakarta</a></td>
+        <td title="Comic Binge"                 class="table-td">A</td>
+        <td title="Moon and Sun"                class="table-td">B</td>
+        <td title="Cul-De-Sac Parades"          class="table-td">C</td>
+        <td title="Forbidden Card"              class="table-na">D</td>
+        <td title="Exchange Bottleneck"         class="table-td">E</td>
+        <td title="Shopping Changes"            class="table-td">F</td>
+        <td title="Permutation Transformation"  class="table-td">G</td>
+        <td title="Writing Tasks"               class="table-na">H</td>
+        <td title="Red Black Ball"              class="table-td">I</td>
+        <td title="Token Distance"              class="table-td">J</td>
+        <td title="Tree Beauty"                 class="table-na">K</td>
+        <td title="Robust Defense"              class="table-na">L</td>
+        <td title="Police Stations"             class="table-td">M</td>
     </tr>
     <tr>
         <td><a href="./icpc/asia_pacific/indonesia/24_25-jakarta.md">2024-2025 Jakarta</a></td>
@@ -270,6 +319,75 @@
         <th>A</th><th>B</th><th>C</th><th>D</th><th>E</th><th>F</th><th>G</th><th>H</th><th>I</th><th>J</th><th>K</th><th>L</th><th>M</th>
     </tr>
 </table>
+
+---
+
+## ICPC - Asia West Continent
+
+---
+
+## ICPC - Europe
+
+<table>
+    <tr>
+        <th>Contest</th>
+        <th>A</th><th>B</th><th>C</th><th>D</th><th>E</th><th>F</th><th>G</th><th>H</th><th>I</th><th>J</th><th>K</th>
+    </tr>
+    <tr>
+        <td><a href="./icpc/europe/championship/24_25-championship.md">2024-2025 Championship</a></td>
+        <td title="Condorcet Elections"             class="table-na">A</td>
+        <td title="Urban Planning"                  class="table-na">B</td>
+        <td title="Ads"                             class="table-td">C</td>
+        <td title="Morse Code"                      class="table-na">D</td>
+        <td title="Porto Vs. Benfica"               class="table-na">E</td>
+        <td title="Mascot Naming"                   class="table-na">F</td>
+        <td title="A Very Long Hike"                class="table-na">G</td>
+        <td title="Statues"                         class="table-na">H</td>
+        <td title="Pinball"                         class="table-na">I</td>
+        <td title="The Ultimate Wine Tasting Event" class="table-td">J</td>
+        <td title="Amusement Park Rides"            class="table-na">K</td>
+    </tr>
+</table>
+
+---
+
+## ICPC - Latin America
+
+### Championship
+
+<table>
+    <tr>
+        <th>Contest</th>
+        <th>A</th><th>B</th><th>C</th><th>D</th><th>E</th><th>F</th><th>G</th><th>H</th><th>I</th><th>J</th><th>K</th><th>L</th>
+    </tr>
+    <tr>
+        <td><a href="./icpc/latin_america/championship/24_25-championship.md">2024-2025 Championship</a></td>
+        <td title="Ananna"                          class="table-td">A</td>
+        <td title="Brazilian FootXOR"               class="table-na">B</td>
+        <td title="Coatless in Yakutsk"             class="table-td">C</td>
+        <td title="Dangerous City"                  class="table-na">D</td>
+        <td title="Exciting Business Opportunities" class="table-na">E</td>
+        <td title="Festival Signs"                  class="table-na">F</td>
+        <td title="Game of Pieces"                  class="table-td">G</td>
+        <td title="Horrible Restaurants"            class="table-td">H</td>
+        <td title="Infinite Arrays"                 class="table-td">I</td>
+        <td title="Just Look Up"                    class="table-na">J</td>
+        <td title="Keep Fighting"                   class="table-td">K</td>
+        <td title="LED Counter"                     class="table-td">L</td>
+    </tr>
+</table>
+
+---
+
+## ICPC - North America
+
+---
+
+## ICPC - Northen Eurasia
+
+---
+
+## ICPC - South Pacific
 
 ---
 

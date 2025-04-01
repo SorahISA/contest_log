@@ -26,6 +26,7 @@
     - [Championship]()
         - [2024-2025 Championship](./icpc/asia_pacific/championship/24_25-championship.md)
     - [Indonesia]()
+        - [2020-2021 Jakarta](./icpc/asia_pacific/indonesia/20_21-jakarta.md)
         <!-- - [2024-2025 Jakarta](./icpc/asia_pacific/indonesia/24_25-jakarta.md) -->
     - [Japan]()
         <!-- - [2024-2025 Yokohama](./icpc/asia_pacific/japan/24_25-yokohama.md) -->
