@@ -8,6 +8,7 @@
 \tand:{\textsc{ and }}
 \tor:{\textsc{ or }}
 \txor:{\textsc{ xor }}
+\mex:{\mathop{\text{mex}}}
 \Arr:{\left\langle #1 \right\rangle}
 \Claim:{\textbf{Claim #1.}}
 \red:{{\color{red}{#1}}}

@@ -13,6 +13,7 @@
         <!-- - [Stage 7: Two Capitals](./ucup/02_07-two_capitals.md) -->
     - [Season 3]()
         - [Stage 3: Ukraine](./ucup/03_03-ukraine.md)
+        - [Stage 8: Cangqian](./ucup/03_08-cangqian.md)
         - [Stage 14: Harbin](./ucup/03_14-harbin.md)
         - [Stage 16: Nanjing](./ucup/03_16-nanjing.md)
         - [Stage 28: Haidian Huangzhuang](./ucup/03_28-haidian_huangzhuang.md)
